@@ -1,8 +1,8 @@
 // Spotify API Configuration
-const clientId = '26a6b497054a4853b8840fc54e5cb5b7'; // ALWAYS KEEP THIS SECURE
-const redirectUri = window.location.href.includes('localhost') 
-  ? 'http://localhost:3000/callback' 
-  : 'https://github.com/Mdsaqib7411/spotify-app'
+const clientId = '36d8862dcb6742e6b4241ff796083d14'; // ALWAYS KEEP THIS SECURE
+const redirectUri = 'https://spotifyclone7411.netlify.app/callback';
+ // or your deployed URL like Netlify
+
 const authEndpoint = 'https://accounts.spotify.com/authorize';
 const apiEndpoint = 'https://api.spotify.com/v1';
 
