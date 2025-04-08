@@ -1,266 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="logo.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spotify Web Player - Music for everyone">
+    <link rel="icon" href="logo.png">
     <title>Spotify - Web Player: Music for everyone</title>
-    <link rel="stylesheet" href="style .css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-      <script src="https://sdk.scdn.co/spotify-player.js"></script>
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <div class="main">
-      <div class="sidebar">
-        <div class="nav">
-          <div class="nav-option" style="opacity: 1">
-            <i class="fa-solid fa-house"></i>
-            <a href="#">Home</a>
-          </div>
-          <div class="nav-option">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <a href="#">Search</a>
-          </div>
-        </div>
-        <div class="library">
-          <div class="option">
-            <div class="lib-option nav-option">
-              <img src="img/library_icon.png" alt="Library" />
-              <a href="#">Library</a>
-            </div>
-            <div class="icons">
-              <i class="fa-solid fa-plus"></i>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-          <div class="lib-box">
-            <div class="box">
-              <div class="box-p1">
-                <p>Create your first playlist</p>
-              </div>
-              <div class="box-p2">
-                <p>It's easy, we'll help you</p>
-              </div>
-              <button class="badge">Create playlist</button>
-            </div>
-            <div class="box">
-              <div class="box-p1">
-                <p>Let's find some podcasts to follow</p>
-              </div>
-              <div class="box-p2">
-                <p>we'll keep you update on new episode</p>
-              </div>
-              <button class="badge">Browse podcasts</button>
-            </div>
-          </div>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Spotify Web Playback SDK -->
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style .css">
+
+</head>
+<body>
+
+    <div id="login-container" class="login-container">
+        <div class="login-content">
+          <h1 class="login-title">Welcome to Spotify Web Player</h1>
+          <p class="login-subtitle">Login with your Spotify account to enjoy your music</p>
+          <button id="login-btn" class="spotify-login-btn">
+            Login with Spotify
+          </button>
         </div>
       </div>
-      <div class="main_container">
-        <div class="sticky-nav">
-          <div class="sticky-nav-icon">
-            <img src="img/backward_icon.png" alt="" />
-            <img src="img/forward_icon.png" alt="" />
-          </div>
-          <div class="sticky-nav-option">
-            <button class="badge nav-icon">Explore Premium</button>
-            <button class="badge nav-icon dark-badge">
-              <i class="fa-regular fa-circle-down"></i> Install App
-            </button>
-            <i class="fa-solid fa-user nav-icon"></i>
-          </div>
-        </div>
+            
+            <section class="library">
+                <div class="option">
+                    <div class="lib-option nav-option">
+                        <img src="img/library_icon.png" alt="Library icon">
+                        <a href="#" aria-label="Your Library">Library</a>
+                    </div>
+                    <div class="icons">
+                        <button class="icon-button" aria-label="Create playlist">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <button class="icon-button" aria-label="Show more">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="lib-box">
+                    <article class="box">
+                        <h3 class="box-p1">Create your first playlist</h3>
+                        <p class="box-p2">It's easy, we'll help you</p>
+                        <button class="badge" aria-label="Create playlist">Create playlist</button>
+                    </article>
+                    
+                    <article class="box">
+                        <h3 class="box-p1">Let's find some podcasts to follow</h3>
+                        <p class="box-p2">We'll keep you updated on new episodes</p>
+                        <button class="badge" aria-label="Browse podcasts">Browse podcasts</button>
+                    </article>
+                </div>
+            </section>
+        </aside>
 
-        <h2>Recently played</h2>
-        <div class="card-con">
-          <div class="card">
-            <img src="img/card1img.jpeg" alt="" class="card-img" />
-            <p class="card-title">Top 50 - Global</p>
-            <p class="card-info">
-              Your daily update of the most played track...
-            </p>
-          </div>
-        </div>
-
-        <h2>Trending now near you</h2>
-        <div class="card-con">
-          <div class="card">
-            <img src="img/card2img.jpeg" alt="" class="card-img" />
-            <p class="card-title">Top 50 - Global</p>
-            <p class="card-info">
-              Your daily update of the most played track...
-            </p>
-          </div>
-
-          <div class="card">
-            <img src="img/card3img.jpeg" alt="" class="card-img" />
-            <p class="card-title">Top 50 - Global</p>
-            <p class="card-info">
-              Your daily update of the most played track...
-            </p>
-          </div>
-
-          <div class="card">
-            <img src="img/card4img.jpeg" alt="" class="card-img" />
-            <p class="card-title">Top 50 - Global</p>
-            <p class="card-info">
-              Your daily update of the most played track...
-            </p>
-          </div>
-
-          <div class="card">
-            <img src="img/card2img.jpeg" alt="" class="card-img" />
-            <p class="card-title">Top 50 - Global</p>
-            <p class="card-info">
-              Your daily update of the most played track...
-            </p>
-          </div>
-
-          <div class="card">
-            <img src="img/card4img.jpeg" alt="" class="card-img" />
-            <p class="card-title">Top 50 - Global</p>
-            <p class="card-info">
-              Your daily update of the most played track...
-            </p>
-          </div>
-        </div>
-        <h2>Featured charts</h2>
-        <div class="card-con">
-          <div class="card-con">
-            <div class="card">
-              <img src="img/card1img.jpeg" alt="" class="card-img" />
-              <p class="card-title">Top 50 - Global</p>
-              <p class="card-info">
-                Your daily update of the most played track...
-              </p>
+        <!-- Main Content -->
+        <main class="main_container">
+            <div class="sticky-nav">
+                <div class="sticky-nav-icon">
+                    <button class="nav-button" aria-label="Go back">
+                        <img src="img/backward_icon.png" alt="Backward">
+                    </button>
+                    <button class="nav-button" aria-label="Go forward">
+                        <img src="img/forward_icon.png" alt="Forward">
+                    </button>
+                </div>
+                <div class="sticky-nav-option">
+                    <button class="badge nav-icon" aria-label="Explore Premium">Explore Premium</button>
+                    <button class="badge nav-icon dark-badge" aria-label="Install App">
+                        <i class="fa-regular fa-circle-down" aria-hidden="true"></i> Install App
+                    </button>
+                    <button class="nav-button" aria-label="User profile">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
             </div>
 
-            <div class="card">
-              <img src="img/card5img.jpeg" alt="" class="card-img" />
-              <p class="card-title">Top 50 - Global</p>
-              <p class="card-info">
-                Your daily update of the most played track...
-              </p>
-            </div>
+            <!-- Music Sections -->
+            <section aria-labelledby="recently-played-heading">
+                <h2 id="recently-played-heading">Recently played</h2>
+                <div class="card-con">
+                    <article class="card" tabindex="0">
+                        <img src="img/card1img.jpeg" alt="Album cover" class="card-img">
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-info">Your daily update of the most played tracks</p>
+                    </article>
+                </div>
+            </section>
 
-            <div class="card">
-              <img src="img/card6img.jpeg" alt="" class="card-img" />
-              <p class="card-title">Top 50 - Global</p>
-              <p class="card-info">
-                Your daily update of the most played track...
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="footer">
-          <div class="line"></div>
-        </div>
-      </div>
-      <!--<div class="music_player">
-        <div class="music">
-          <div class="music-img">
-            <img src="card1img.jpeg" alt="played" width="50px" height="50px" />
-            <div>
-              <h3 class="music-title">Daylight</h3>
-              <p class="singer-name">David Kushner</p>
-            </div>
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </div>
-          <div class="controle">
-            <div class="controle-img">
-              <a href="#"
-                ><img src="player_icon1.png" alt="" width="20px" height="20px"
-              /></a>
-              <a href="#"
-                ><img src="player_icon2.png" alt="" width="20px" height="20px"
-              /></a>
-              <a href="#"
-                ><img src="player_icon3.png" alt="" width="20px" height="20px"
-              /></a>
-              <a href="#"
-                ><img src="player_icon4.png" alt="" width="20px" height="20px"
-              /></a>
-              <a href="#"
-                ><img src="player_icon5.png" alt="" width="20px" height="20px"
-              /></a>
-            </div>
-            <div class="input-range">
-              <p>1:55</p>
-              &nbsp;&nbsp;
-              <input type="range" step="1" min="0" max="100" value="40" />
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <p>3:33</p>
-            </div>
-          </div>
-          <div class="sound-controle">
-            <a href="#"
-              ><img src="play_musicbar.png" alt="" width="20px" height="20px"
-            /></a>
-            <a href="#"><i class="fa-solid fa-microphone"></i></a>
-            <a href="#"><i class="fa-solid fa-rotate"></i></a>
-            <a href="#"><i class="fa-solid fa-volume-low"></i></a>
-            <input type="range" step="10" min="0" max="100" value="20" />
-          </div>
-        </div>
-      </div> -->
+            <section aria-labelledby="trending-heading">
+                <h2 id="trending-heading">Trending now near you</h2>
+                <div class="card-con">
+                    <article class="card" tabindex="0">
+                        <img src="img/card2img.jpeg" alt="Album cover" class="card-img">
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-info">Your daily update of the most played tracks</p>
+                    </article>
 
-      <div class="music_player">
-        <div class="album"></div>
-        <div class="player">
-          <div class="player-controle">
-            <img
-              src="img/player_icon1.png"
-              alt=""
-              class="player-icon-controle"
-            />
-            <img
-              src="img/player_icon2.png"
-              alt=""
-              class="player-icon-controle"
-            />
-            <img
-              src="img/player_icon3.png"
-              alt=""
-              style="height: 2rem; opacity: 1"
-              class="player-icon-controle"
-            />
-            <img
-              src="img/player_icon4.png"
-              alt=""
-              class="player-icon-controle"
-            />
-            <img
-              src="img/player_icon5.png"
-              alt=""
-              class="player-icon-controle"
-            />
-          </div>
-          <div class="player-bar">
-            <span>00:00</span>&nbsp;&nbsp;
-            <input
-              type="range"
-              min="0"
-              max="100"
-              step="1"
-              class="progress-bar"
-            />&nbsp;&nbsp;
-            <span>03:00</span>
-          </div>
-        </div>
-        <div class="controle"></div>
-      </div>
+                    <article class="card" tabindex="0">
+                        <img src="img/card3img.jpeg" alt="Album cover" class="card-img">
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-info">Your daily update of the most played tracks</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <img src="img/card4img.jpeg" alt="Album cover" class="card-img">
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-info">Your daily update of the most played tracks</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <img src="img/card2img.jpeg" alt="Album cover" class="card-img">
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-info">Your daily update of the most played tracks</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <img src="img/card4img.jpeg" alt="Album cover" class="card-img">
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-info">Your daily update of the most played tracks</p>
+                    </article>
+                </div>
+            </section>
+
+            <section aria-labelledby="featured-charts-heading">
+                <h2 id="featured-charts-heading">Featured charts</h2>
+                <div class="card-con">
+                    <article class="card" tabindex="0">
+                        <img src="img/card1img.jpeg" alt="Album cover" class="card-img">
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-info">Your daily update of the most played tracks</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <img src="img/card5img.jpeg" alt="Album cover" class="card-img">
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-info">Your daily update of the most played tracks</p>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <img src="img/card6img.jpeg" alt="Album cover" class="card-img">
+                        <h3 class="card-title">Top 50 - Global</h3>
+                        <p class="card-info">Your daily update of the most played tracks</p>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="line"></div>
+            </footer>
+        </main>
     </div>
-  </body>
+
+    <!-- Music Player -->
+    <footer class="music_player" role="contentinfo">
+        <div class="album" aria-live="polite">
+            <!-- Will be populated by JavaScript -->
+        </div>
+        <div class="player">
+            <div class="player-controle">
+                <button class="player-button" aria-label="Shuffle">
+                    <img src="img/player_icon1.png" alt="Shuffle" class="player-icon-controle">
+                </button>
+                <button class="player-button" aria-label="Previous">
+                    <img src="img/player_icon2.png" alt="Previous" class="player-icon-controle">
+                </button>
+                <button class="player-button" aria-label="Play/Pause">
+                    <img src="img/player_icon3.png" alt="Play" class="player-icon-controle" style="height: 2rem; opacity: 1">
+                </button>
+                <button class="player-button" aria-label="Next">
+                    <img src="img/player_icon4.png" alt="Next" class="player-icon-controle">
+                </button>
+                <button class="player-button" aria-label="Repeat">
+                    <img src="img/player_icon5.png" alt="Repeat" class="player-icon-controle">
+                </button>
+            </div>
+            <div class="player-bar">
+                <span aria-live="polite">00:00</span>
+                <input type="range" min="0" max="100" step="1" class="progress-bar" aria-label="Track progress">
+                <span>05:00</span>
+            </div>
+        </div>
+        <div class="controle">
+            <!-- Volume controls will be added by JavaScript -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
