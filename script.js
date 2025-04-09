@@ -1,6 +1,6 @@
 // Spotify API Configuration
-const clientId = '36d8862dcb6742e6b4241ff796083d14';
-const redirectUri = 'https://spotifyclone7411.netlify.app/callback';
+const clientId = 'f568fbd5ea6649c4a0b07f7270e89646';
+const redirectUri = 'https://spotifyclone7411.netlify.app/callback.html';
 
 const authEndpoint = 'https://accounts.spotify.com/authorize';
 const apiEndpoint = 'https://api.spotify.com/v1';
